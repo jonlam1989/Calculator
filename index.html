@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Loan Calculator</title>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="form-container">
+                <form class="form" action="#">
+                    <label for="loan-amount">Loan amount ($)</label>
+                    <input type="text" id="loan-amount" autocomplete="off">
+
+                    <label for="loan-years">Loan term in years</label>
+                    <input type="text" id="loan-years" autocomplete="off">
+
+                    <div>Or</div>
+
+                    <label for="loan-months">Loan term in months</label>
+                    <input type="text" id="loan-months" autocomplete="off">
+
+                    <label for="loan-rate">Interest rate (%)</label>
+                    <div class="last-input">
+                        <input type="text" id="loan-rate" autocomplete="off">
+                        <button id="calculate">Calculate</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="display-data-container">
+                <div class="monthly-payments">
+                    <div>Monthly Payments</div>
+                    <div>
+                        <span id="dollars-icon"><i class="fas fa-dollar-sign"></i></span>
+                        <div id="dollars">0</div>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <div class="principal">
+                        <div>Total Principal Paid</div>
+                        <div>
+                            <span><i class="fas fa-dollar-sign"></i></span>
+                            <div id="dollars-principal">0</div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="interest">
+                        <div>Total Interest Paid</div>
+                        <div>
+                            <span><i class="fas fa-dollar-sign"></i></span>
+                            <div id="dollars-interest">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
